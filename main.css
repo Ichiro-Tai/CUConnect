@@ -1,0 +1,108 @@
+.overlay{
+ position: absolute;
+ min-height: 100%;
+ min-width: 100%;
+ left: 0;
+ top: 0;
+ background: rgba(244, 244, 244, 0.79);
+}
+.mainmenu-bg {
+	background:#FAFAFA;
+}
+.student-bg {
+	background:#FAFAE0;
+}
+.family-bg {
+	background:#E0E0FA;
+}
+.business-bg {
+	background:#E0FAE0;
+}
+.navbar{ background:#FFF3AF;}
+.nav-link , .navbar-brand{ color: #000000; cursor: pointer;}
+.nav-link{ margin-right: 1em !important;}
+.navbar-collapse{ justify-content: flex-end;}
+.navbar-toggler{  background:#fff3af !important;}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.header{
+ background-image: url('tempbg.png');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+.header2{
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+
+
+.stack1{
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+.stack2{
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+.stack3{
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+.description{
+    position: absolute;
+    top: 30%;
+	left: 30%;
+    margin: auto;
+    padding: 2em;
+	background-size: cover;
+	background-position: center;
+}
+.mission{
+    top: 30%;
+	left: 30%;
+    margin: auto;
+    padding: 2em;
+}
+.intro{
+	top: 15%;
+	left: 10%;
+    margin: auto;
+    padding: 2em;
+}
+.mission h1{
+ color:#F97300 ;
+ font-size: 100px;
+}
+.mission p{
+ color:#666;
+ font-size: 20px;
+ line-height: 1.5;
+}
+.description h1{
+ color:#F97300 ;
+ font-size: 100px;
+}
+.description p{
+ color:#666;
+ font-size: 20px;
+ line-height: 1.5;
+}
+.description button{
+ border:1px  solid #F97300;
+ background:#F97300;
+ color:#fff;
+}
+.businesslogo{
+	max-height: 70%; 
+	max-width: 70%; 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
