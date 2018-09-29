@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <style>
+        .request-form {
+            width: 60%;
+            margin: 0 auto 20px auto;
+            padding: 2%;
+            border: solid #636363;
+            border-radius: 5px;
+            border-width: 2px;
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href=""/>
+    <link rel="shortcut icon" href=""/>
+
+    <title>Family Account - CUConnect</title>
+</head>
+
+<body>
+    <form action="{{ url_for('login') }}" method="post">
+        <input type="text" name="username"/>
+        <input type="password" name="password"/>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+
+    <div class="container">
+        <h1>Ichiro Tai</h1>
+        <h2>Class Appointments</h2>
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Time</th>
+                    <th>Pricing</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>Mar. 19, 5:00pm - 8:00pm</td>
+                    <td>$12</td>
+                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Pending Requests</h2>
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Proposed Time</th>
+                    <th>Pricing</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>Mar. 19, 5:00pm - 8:00pm <br />
+                        Mar. 20, 8:00pm - 9:00pm</td>
+                    <td>$16</td>
+                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="request-form">
+            <form class="form-group" action="{{ url_for('create_request') }}" method="post">
+                <h3>Create New Teaching Request</h3>
+                <div class="form-group">
+                    <label for="classSubject">Class Subject: </label>
+                    <input type="text" class="form-control" id="classSubject" name="classSubject" placeholder="Subject for the class" />
+
+                    <label for="preferredDate">Preferred Date: </label>
+                    <input type="date" class="form-control" id="preferredDate" name="preferredDate" />
+
+                    <label for="preferredHours">Preferred Hours: </label>
+                    <input type="time" class="form-control" id="preferredHours" name="preferredHours" />
+
+                    <label>Pricing: </label> <br />
+                    <div class="form-control">
+                        <label class="radio-inline"><input type="radio" name="pricing" value="8">$8</label>
+                        <label class="radio-inline"><input type="radio" name="pricing" value="12">$12</label>
+                        <label class="radio-inline"><input type="radio" name="pricing" value="16">$16</label>
+                        <label class="radio-inline"><input type="radio" name="pricing" value="20">$20</label>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+
+        <h2>Appointment History</h2>
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Time</th>
+                    <th>Pricing</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>Mar. 19, 5:00pm - 8:00pm</td>
+                    <td>$12</td>
+                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
