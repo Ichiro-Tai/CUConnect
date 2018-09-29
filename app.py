@@ -1,4 +1,9 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
+#
+
 import pyrebase
+import util
 from flask import (
     Flask, render_template, request, url_for, redirect
 )
@@ -41,8 +46,8 @@ def create_request():
     user = auth.sign_in_with_email_and_password(username, password)
 
     db = firebase.database()
-    # TODO: the next line causes 401 not authorized exception
-    db.child('classrequest').push(new_request, user['idToken'])
+    # db.child('classrequest').push(new_request, user['idToken'])
+    util.push_to_db(db, user, new_request)
     return "hello"
 
 
