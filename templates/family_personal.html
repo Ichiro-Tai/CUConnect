@@ -18,49 +18,54 @@
           <p style = "margin: 20px 0px 40px 20px; font-size: 30px">My Bill: $22 <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin: 0px 0px 0px 20px">Pay Bill</a></p>
       	</div>
       </div>
-        <h2>Class Appointments</h2>
-        <table class="table table-hover table-responsive">
-            <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Time</th>
-                    <th>Pricing</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Math</td>
-                    <td>Mar. 19, 5:00pm - 8:00pm</td>
-                    <td>$12</td>
-                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-                </tr>
-            </tbody>
-        </table>
+      <h2 style = "margin: 50px 0px 20px 0px">My Appointments</h2>
+      <table class="table table-hover table-responsive">
+          <thead>
+              <tr>
+                  <th>Subject</th>
+                  <th>Time</th>
+                  <th>Rewards &ensp;</th>
+                  <th>Description</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Math</td>
+                  <td>Mar. 19, 5:00pm - 8:00pm</td>
+                  <td>12 points/hr</td>
+                  <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                  <td><a class="btn btn-primary" href="{{ url_for('canvas') }}" >Enter classroom</a></td>
+              </tr>
+          </tbody>
+      </table>
+      <h2 style = "margin: 50px 0px 20px 0px">Pending appointments</h2>
+    	<table class="table table-hover table-responsive" id="pendingRequests">
+    			<thead>
+    					<tr>
+    							<th>Subject</th>
+    							<th>Time</th>
+    							<th>Rewards &ensp;</th>
+    							<th>Description</th>
+    							<th></th>
+                  <th></th>
+    					</tr>
+    			</thead>
+    			<tbody>
+    					<tr>
+    							<td>Math</td>
+    							<td>Mar. 19, 5:00pm - 8:00pm</td>
+    							<td>12 points/hr</td>
+    							<td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+    							<td><a class="btn btn-primary" href="{{ url_for('family_personal') }}" >Edit offer</a></td>
+                  <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >View applicants</a></td>
+    					</tr>
+    			</tbody>
+    	</table>
 
-        <h2>Pending Requests</h2>
-        <table class="table table-hover table-responsive" id="pendingRequests">
-            <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Proposed Time</th>
-                    <th>Pricing</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Math</td>
-                    <td>2019-03-19, 17:00</td>
-                    <td>$16</td>
-                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="request-form">
+        <div class="request-form2">
             <form class="form-group" action="" method="">
-                <h3>Create New Teaching Request</h3>
+                <h2 style = "margin: 15px 0px 20px 0px">Create new appointment</h2>
                 <div class="form-group">
                     <label for="classSubject">Class Subject: </label>
                     <input type="text" class="form-control" id="classSubject" name="classSubject" placeholder="Subject for the class" />
@@ -86,7 +91,7 @@
             </form>
         </div>
 
-        <h2>Appointment History</h2>
+        <h2 style = "margin: 50px 0px 20px 0px">Appointment history</h2>
         <table class="table table-hover table-responsive">
             <thead>
                 <tr>

@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/drawingboard.js/0.4.6/drawingboard.min.css">
+<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/drawingboard.js/0.4.6/drawingboard.js"></script>
+<script src="http://localhost:8718/socket.io/socket.io.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<button class="btn btn-secondary" onclick="window.history.back()">Go Back</button>
+
+<div id="canvas" style="pointer-events: none"></div>
+<link rel="stylesheet" href="{{ url_for('static', filename='canvas.css') }}">
+<script src="{{ url_for('static', filename='canvas.js') }}"></script>

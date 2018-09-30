@@ -1,0 +1,15 @@
+{
+	"extends": "wikimedia",
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"globals": {
+		"$": false,
+		"jQuery": false,
+		"DrawingBoard": false
+	},
+	"rules": {
+		"no-console": 0
+	}
+}

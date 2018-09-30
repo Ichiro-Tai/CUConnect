@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 style = "margin: 20px 0px 20px 0px">Applicants for this post:</h2>
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Summary</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wade Angrave</td>
+                <td>Yo whats up its me</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Accept</a></td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Decline</a></td>
+            </tr>
+            <tr>
+                <td>Margaret Meseguer</td>
+                <td>empl0y me pl0x</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Accept</a></td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Decline</a></td>
+            </tr>
+            <tr>
+                <td>Alexander Challen</td>
+                <td>I am skilled at mathematics and I believe I'm the right person for this post.</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Accept</a></td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_applicants') }}" >Decline</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="{{ url_for('family_personal') }}" style="margin-bottom: 20px">Back</a>
+</div>
+{% endblock %}

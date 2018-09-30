@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 style = "margin: 20px 0px 20px 0px">My Coupons</h2>
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Business</th>
+                <th>Description</th>
+                <th>No. owned</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>County Market</td>
+                <td>A $10 discount for any one-time purchase over $30</td>
+                <td>1</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_rewards') }}" >Use</a></td>
+            </tr>
+            <tr>
+                <td>County Market</td>
+                <td>50% off on any article priced below $50</td>
+                <td>2</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_rewards') }}" >Use</a></td>
+            </tr>
+            <tr>
+                <td>Panda Express</td>
+                <td>Quadruple the contents of any dish you purchase</td>
+                <td>2</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_rewards') }}" >Use</a></td>
+            </tr>
+            <tr>
+                <td>Walgreens</td>
+                <td>A $10 discount for any one-time purchase over $30</td>
+                <td>1</td>
+                <td><a class="btn btn-primary" href="{{ url_for('view_rewards') }}" >Use</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin-bottom: 20px">Back</a>
+</div>
+{% endblock %}

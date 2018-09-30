@@ -15,7 +15,7 @@
 		<div class="stack2">
 		</div>
 		<p style = "margin: 20px 0px 40px 20px; font-size: 55px"><b><font color = "red">Good morning,</font><br> Alexander Challen</b></p>
-    <p style = "margin: 20px 0px 40px 20px; font-size: 30px">My Points: 32 <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin: 0px 0px 0px 20px">Redeem now</a></p>
+    <p style = "margin: 20px 0px 40px 20px; font-size: 30px">My Points: 32 <a class="btn btn-primary" href="{{ url_for('redeem_rewards') }}" style="margin: 0px 0px 0px 20px">Redeem now</a><a class="btn btn-primary" href="{{ url_for('view_rewards') }}" style="margin: 0px 0px 0px 20px">My coupons</a></p>
 	</div>
 </div>
 	<h2 style = "margin: 50px 0px 20px 0px">My Appointments</h2>
@@ -35,7 +35,7 @@
 							<td>Mar. 19, 5:00pm - 8:00pm</td>
 							<td>12 points/hr</td>
 							<td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-							<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Enter classroom</a></td>
+							<td><a class="btn btn-primary" href="{{ url_for('canvas') }}" >Enter classroom</a></td>
 					</tr>
 			</tbody>
 	</table>
@@ -64,17 +64,20 @@
                     <td>Mar. 19, 5:00pm - 8:00pm</td>
                     <td>12 points/hr</td>
                     <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-										<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Apply</a></td>
+										<td><div class="btn btn-primary" onclick="submitApplication()">Apply</div></td>
                 </tr>
                 <tr>
                     <td>Math</td>
                     <td>Mar. 21, 5:00pm - 8:00pm</td>
                     <td>20 points/hr</td>
                     <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-										<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Apply</a></td>
+										<td><div class="btn btn-primary" onclick="submitApplication()">Apply</div></td>
                 </tr>
             </tbody>
         </table>
+				<div id = "applicationtext" style="display: none">
+					<p style = "margin : 20px 0px 20px 0px; font-size: 20px">Your profile has been sent. Please patiently wait for a response.</p>
+				</div>
     </form>
 </div>
 </div>

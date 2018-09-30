@@ -2,12 +2,18 @@
 
 {% block content %}
 	<header class="header" style="background-image: url({{ url_for('static', filename='images/tempbg.png') }})">
-		<div class="row">
-			<div class="description ">
+
+		<div class="row" style = "margin-right: 0px">
+			<div class = "col-lg-2 col-md-2 col-sm-12">
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 description">
 			<h1 class="text-center">CUConnect</h1>
-			<p class="text-center">Integrating education with the community</p>
+			<p class="text-center">Integrating education into the community</p>
+			</div>
+			<div class = "col-lg-2 col-md-2 col-sm-12">
 			</div>
 		</div>
+
 	</header>
 	<header class="header2">
 		<div class="row" style = "margin-right: 0px">
@@ -32,7 +38,7 @@
 				<br>
 				<img src="{{ url_for('static', filename='images/family.png') }}" width = "120" height = "120" style = "display: block; margin: 0 auto;">
 				<br>
-				<p class="text-center" style = "font-size: 20px">Chambana families</p>
+				<p class="text-center" style = "font-size: 20px">Families</p>
 				<br>
 			</div>
 			<div class = "col-lg-4 col-md-4 col-sm-12 business-bg" onmouseover="changebusiness()">
@@ -58,7 +64,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
-				<img class="demopic" src="{{ url_for('static', filename='images/university_student_demo.png') }}" />
+				<img class="demopic" src="{{ url_for('static', filename='images/university_student_demo.png') }}" style="bottom: 0px;"/>
 			</div>
 		</div>
 
@@ -124,7 +130,7 @@
 		</div>
 		<div class="stack4 col-lg-8 col-md-8 col-sm-12">
 			<p style = "font-size: 30px; margin:20px 20px 20px 20px;">...And many university students and families around you.</p>
-			<button type = "button" class = "btn btn-secondary" style = "display: flex; margin: 0 auto; justify-content: center; font-size: 40px">Join us today</button>
+			<a class = "btn btn-secondary" href="{{ url_for('register') }}" style = "display: flex; justify-content: center; font-size: 40px" > Join us today</a>
 			</div>
 		</div>
 		<div class="stack4 col-lg-2 col-md-2 col-sm-12">

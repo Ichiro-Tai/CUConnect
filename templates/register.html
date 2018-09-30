@@ -14,7 +14,7 @@ background-position: center;">
   </div>
 <div class="request-form2">
     <div style="margin: 0px 0px">
-        <form class="form-group" action="" method="post">
+        <form class="form-group" id="registerForm">
             <div class="form-group">
                 <label for="username" style = "margin: 20px 0px 10px 0px">Username: </label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" />
@@ -23,14 +23,14 @@ background-position: center;">
                 <label for="password" style = "margin: 20px 0px 10px 0px">Password: </label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
                 <label for="password" style = "margin: 20px 0px 10px 0px">I am a: </label>
-                <div class=".radio-inline">
-                <label><input type="radio" name="optradio" checked>UofI student</label>
-                <label><input type="radio" name="optradio">Parent</label>
-                <label><input type="radio" name="optradio">Business owner</label>
+                <div class="radio-inline">
+                    <label><input type="radio" name="userType" value="student" checked>UofI student</label>
+                    <label><input type="radio" name="userType" value="family">Parent</label>
+                    <label><input type="radio" name="userType" value="business">Business owner</label>
                 </div>
             </div>
             <div class="text-center">
-            <p><a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="width: 80%; margin: 0 auto">Join now</a></p>
+            <div class="btn btn-primary" onclick="redirectPersonal()" style="width: 80%; margin: 0 auto">Join now</div>
             </div>
         </form>
     </div>

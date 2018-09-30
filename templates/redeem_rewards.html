@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <p style="font-size:60px; color: #F97300"><b>Reward yourself for your hard work.</b></h1>
+    <h2 style = "margin: 20px 0px 20px 0px">My Points: 32 points</h2>
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Business</th>
+                <th>Description</th>
+                <th>Points</th>
+                <th>No. of Items</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>County Market</td>
+                <td>A $10 discount for any one-time purchase over $30</td>
+                <td>12</td>
+                <td><input type="number" /></td>
+            </tr>
+            <tr>
+                <td>County Market</td>
+                <td>50% off on any article priced below $50</td>
+                <td>20</td>
+                <td><input type="number" /></td>
+            </tr>
+            <tr>
+                <td>Panda Express</td>
+                <td>Quadruple the contents of any dish you purchase</td>
+                <td>20</td>
+                <td><input type="number" /></td>
+            </tr>
+            <tr>
+                <td>Walgreens</td>
+                <td>A $10 discount for any one-time purchase over $30</td>
+                <td>16</td>
+                <td><input type="number" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 style = "margin: 20px 0px 30px 0px">Transaction cost: 0 points</h3>
+    <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin-bottom: 20px">Complete transaction</a>
+</div>
+{% endblock %}
