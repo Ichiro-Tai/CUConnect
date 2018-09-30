@@ -30,3 +30,11 @@ function changebusiness() {
     $('#familyDemo').hide();
     $('#businessDemo').show();
 }
+
+
+function addrequest() {
+    var classSubject = '<td>' +  $('#classSubject').val() + '</td>';
+    var time = '<td>' +  $('#preferredDate').val() + ', ' + $('#preferredHours').val() + '</td>';
+    var desc = '<td>' +  $('#description').val() + '</td>';
+    $('#pendingRequests tr:last').after('<tr>' + classSubject + time + '<td>$16</td>' + desc + '</tr>');
+}

@@ -1,42 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html" %}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    <style>
-        .request-form {
-            width: 60%;
-            margin: 0 auto 20px auto;
-            padding: 2%;
-            border: solid #636363;
-            border-radius: 5px;
-            border-width: 2px;
-        }
-    </style>
-
-    <!-- Favicon -->
-    <link rel="icon" href=""/>
-    <link rel="shortcut icon" href=""/>
-
-    <title>Family Account - CUConnect</title>
-</head>
-
-<body>
-    <form action="{{ url_for('login') }}" method="post">
-        <input type="text" name="username"/>
-        <input type="password" name="password"/>
-        <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
-
+{% block content %}
     <div class="container">
-        <h1>Ichiro Tai</h1>
+        <h1>Jayden Smith</h1>
         <h2>Class Appointments</h2>
         <table class="table table-hover table-responsive">
             <thead>
@@ -58,7 +24,7 @@
         </table>
 
         <h2>Pending Requests</h2>
-        <table class="table table-hover table-responsive">
+        <table class="table table-hover table-responsive" id="pendingRequests">
             <thead>
                 <tr>
                     <th>Subject</th>
@@ -70,8 +36,7 @@
             <tbody>
                 <tr>
                     <td>Math</td>
-                    <td>Mar. 19, 5:00pm - 8:00pm <br />
-                        Mar. 20, 8:00pm - 9:00pm</td>
+                    <td>2019-03-19, 17:00</td>
                     <td>$16</td>
                     <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
                 </tr>
@@ -79,7 +44,7 @@
         </table>
 
         <div class="request-form">
-            <form class="form-group" action="{{ url_for('create_request') }}" method="post">
+            <form class="form-group" action="" method="">
                 <h3>Create New Teaching Request</h3>
                 <div class="form-group">
                     <label for="classSubject">Class Subject: </label>
@@ -98,8 +63,11 @@
                         <label class="radio-inline"><input type="radio" name="pricing" value="16">$16</label>
                         <label class="radio-inline"><input type="radio" name="pricing" value="20">$20</label>
                     </div>
+
+                    <label for="description">Description: </label>
+                    <input type="textarea" class="form-control" id="description" name="description" />
                 </div>
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <div class="btn btn-primary" onclick="addrequest()">Submit</div>
             </form>
         </div>
 
@@ -124,6 +92,5 @@
         </table>
 
     </div>
-</body>
 
-</html>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="request-form">
+    <div style="margin: 100px 50px">
+        <form class="form-group" action="" method="post">
+            <h3>CUConnect Login</h3>
+            <div class="form-group">
+                <label for="username">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" />
+
+                <label for="password">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
+            </div>
+            <a class="btn btn-primary" href="{{ url_for('personal') }}">Login</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

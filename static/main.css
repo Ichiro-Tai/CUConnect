@@ -130,3 +130,13 @@
 .demoHeight .demobg {
     height: 300px;
 }
+
+
+.request-form {
+    width: 60%;
+    margin: 0 auto 20px auto;
+    padding: 2%;
+    border: solid #636363;
+    border-radius: 5px;
+    border-width: 2px;
+}
