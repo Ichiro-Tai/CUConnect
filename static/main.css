@@ -140,10 +140,21 @@
 
 
 .request-form {
-    width: 60%;
+    background: #FFFFFF;
+    width: 28%;
     margin: 0 auto 20px auto;
     padding: 2%;
     border: solid #636363;
     border-radius: 5px;
-    border-width: 2px;
+    border-width: 1px;
+}
+
+.request-form2 {
+    background: #FFFFFF;
+    width: 70%;
+    margin: 0 auto 20px auto;
+    padding: 2%;
+    border: solid #636363;
+    border-radius: 5px;
+    border-width: 1px;
 }

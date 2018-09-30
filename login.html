@@ -12,8 +12,8 @@
 	<!-- Fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-	<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="/static/main.css">
+	<script type="text/javascript" src="/static/main.js"></script>
 
 	<!-- Favicon -->
 	<link rel="icon" href=""/>
@@ -24,31 +24,49 @@
 <body class="mainmenu-bg">
 	<nav class="navbar navbar-expand-lg" style="background-color: #fff3af">
 		<a class="navbar-brand" href="#">
-			<img src="{{ url_for('static', filename='images/templogo.png') }}" width="30" height="30" alt="Logo">
+			<img src="/static/images/templogo.png" width="30" height="30" alt="Logo">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse">
 			<div class="nav navbar-nav navbar-right">
-			<a class="nav-item nav-link" href="{{ url_for('index') }}">Home</a>
-			  <a class="nav-item nav-link" href="{{ url_for('rewards') }}">Rewards</a>
-			  {% if logged_in %}
-			  <a class="nav-item nav-link" href="{{ url_for('student_personal') }}">Personal</a>
-			  {% else %}
-			  <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
-			  <a class="nav-item nav-link" href="{{ url_for('login') }}">Sign in</a>
-			  {% endif %}
+			<a class="nav-item nav-link" href="/">Home</a>
+			  <a class="nav-item nav-link" href="/aboutus">About Us</a>
+			  <a class="nav-item nav-link" href="/rewards">Rewards</a>
+			  
+			  <a class="nav-item nav-link" href="/register">Register</a>
+			  <a class="nav-item nav-link" href="/login">Sign in</a>
+			  
 			</div>
 		</div>
 	</nav>
-{% block content %}
-{% endblock %}
+
+<div class="stack2">
+</div>
+<div class="request-form">
+    <img src="/static/images/templogo.png" class = "businesslogo">
+    <div style="margin: 0px 30px">
+        <form class="form-group" action="" method="post">
+            <h3 style="text-align: center; font-size = 30px">Sign in to CUConnect</h3>
+            <div class="form-group">
+                <label for="username" style = "margin: 20px 0px 10px 0px">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" />
+
+                <label for="password" style = "margin: 20px 0px 10px 0px">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
+            </div>
+            <p><a class="btn btn-primary" href="/personal">Connect</a><font color="blue" style = "margin:0px 0px 0px 15px">    Forgot password?</font></p>
+        </form>
+    </div>
+</div>
+
+
 <footer style="background-color: #fff3af">
 	<div class="container" style="min-height: 100%; min-width: 100%;">
 		<div class="row">
 			<div class = "col-lg-4 col-md-4 col-sm-12">
-				<p style="margin: 20px 0px 0px 20px"><img src="{{ url_for('static', filename='images/templogo.png') }}" class = "businesslogo2"> <b style= "font-size: 30px">CUConnect</b></p>
+				<p style="margin: 20px 0px 0px 20px"><img src="/static/images/templogo.png" class = "businesslogo2"> <b style= "font-size: 30px">CUConnect</b></p>
 				<p style="margin: 20px 0px 0px 20px">XXX building, IL 99999<br>1.234.567.890<br>aaa@CUC.com</p>
 			</div>
 			<div class = "col-lg-4 col-md-4 col-sm-12">

@@ -39,3 +39,13 @@ def business_personal():
 @app.route('/rewards')
 def rewards():
     return render_page('rewards.html')
+
+
+@app.route('/aboutus')
+def aboutus():
+    return render_page('aboutus.html')
+
+
+@app.route('/register')
+def register():
+    return render_page('register.html')

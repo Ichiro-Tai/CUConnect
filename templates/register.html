@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row" style = "margin-right: 0px; background-image: url({{ url_for('static', filename='images/tempbg.png') }}); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;">
+<div class="col-lg-8 col-md-8 col-sm-12">
+  <p style="margin: 40px 0px 0px 100px; font-size : 100px"><b>Join the Party.</b></p>
+  <p style="margin: 30px 0px 0px 100px; font-size : 30px; text-indent: 30px">Enhance your time in Urbana-Champaign by becoming a member of one of the fastest-growing and innovative, and self-sustainable communities on the internet.</p>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12">
+  <div class="stack4">
+  </div>
+<div class="request-form2">
+    <div style="margin: 0px 0px">
+        <form class="form-group" action="" method="post">
+            <div class="form-group">
+                <label for="username" style = "margin: 20px 0px 10px 0px">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" />
+                <label for="email" style = "margin: 20px 0px 10px 0px">Email address: </label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email address" />
+                <label for="password" style = "margin: 20px 0px 10px 0px">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
+                <label for="password" style = "margin: 20px 0px 10px 0px">I am a: </label>
+                <div class=".radio-inline">
+                <label><input type="radio" name="optradio" checked>UofI student</label>
+                <label><input type="radio" name="optradio">Parent</label>
+                <label><input type="radio" name="optradio">Business owner</label>
+                </div>
+            </div>
+            <div class="text-center">
+            <p><a class="btn btn-primary" href="{{ url_for('personal') }}" style="width: 80%; margin: 0 auto">Join now</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="stack4">
+</div>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="stack2">
+</div>
 <div class="request-form">
-    <div style="margin: 100px 50px">
+    <img src="{{ url_for('static', filename='images/templogo.png') }}" class = "businesslogo">
+    <div style="margin: 0px 30px">
         <form class="form-group" action="" method="post">
-            <h3>CUConnect Login</h3>
+            <h3 style="text-align: center; font-size = 30px">Sign in to CUConnect</h3>
             <div class="form-group">
-                <label for="username">Username: </label>
+                <label for="username" style = "margin: 20px 0px 10px 0px">Username: </label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" />
 
-                <label for="password">Password: </label>
+                <label for="password" style = "margin: 20px 0px 10px 0px">Password: </label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
             </div>
-            <a class="btn btn-primary" href="{{ url_for('student_personal') }}">Login</a>
+            <p><a class="btn btn-primary" href="{{ url_for('student_personal') }}">Connect</a><font color="blue" style = "margin:0px 0px 0px 15px">    Forgot password?</font></p>
         </form>
     </div>
 </div>
