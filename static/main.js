@@ -46,3 +46,8 @@ function searchToggle() {
     $('#searchTable').show();
     $('#emptySpace').hide();
 }
+
+function redirectPersonal() {
+    var user_type = $('input[name=userType]:checked', '#registerForm').val() + '_personal';
+    window.location.replace(new URL(user_type, window.location.href).href);
+}
