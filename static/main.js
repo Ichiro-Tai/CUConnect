@@ -13,6 +13,9 @@ $(document).ready(function(){
 $(document).ready(function(){
  $('.stack3').height($(window).height() * 0.3);
 })
+$(document).ready(function(){
+ $('.stack4').height($(window).height() * 0.15);
+})
 
 
 function changestudent() {
