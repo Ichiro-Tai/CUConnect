@@ -57,8 +57,7 @@
 }
 .description{
     position: absolute;
-    top: 30%;
-	left: 30%;
+    top: 20%;
     margin: auto;
     padding: 2em;
 	background-size: cover;
