@@ -27,7 +27,7 @@
  justify-content: flex-end;
 }
 .header{
- background-image: url('tempbg.png');
+ /* background-image: url('tempbg.png'); */
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-size: cover;
@@ -100,9 +100,31 @@
  color:#fff;
 }
 .businesslogo{
-	max-height: 70%; 
-	max-width: 70%; 
+	max-height: 70%;
+	max-width: 70%;
 	display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.demobg .demopic {
+    max-height: 100%;
+    position: absolute;
+}
+
+.demobg{
+	min-height: 100%;
+}
+#studentDemo{
+	background: #FAFAE0;
+}
+#familyDemo{
+	background: #E0E0FA;
+}
+#businessDemo{
+	background: #E0FAE0;
+}
+
+.demoHeight .demobg {
+    height: 300px;
 }

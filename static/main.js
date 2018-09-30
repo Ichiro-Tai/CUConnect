@@ -13,3 +13,20 @@ $(document).ready(function(){
 $(document).ready(function(){
  $('.stack3').height($(window).height() * 0.3);
 })
+
+
+function changestudent() {
+    $('#studentDemo').show();
+    $('#familyDemo').hide();
+    $('#businessDemo').hide();
+}
+function changefamily() {
+    $('#studentDemo').hide();
+    $('#familyDemo').show();
+    $('#businessDemo').hide();
+}
+function changebusiness() {
+    $('#studentDemo').hide();
+    $('#familyDemo').hide();
+    $('#businessDemo').show();
+}
