@@ -41,9 +41,9 @@ def rewards():
     return render_page('rewards.html')
 
 
-@app.route('/aboutus')
+@app.route('/redeem_rewards')
 def aboutus():
-    return render_page('aboutus.html')
+    return render_page('redeem_rewards.html')
 
 
 @app.route('/register')
