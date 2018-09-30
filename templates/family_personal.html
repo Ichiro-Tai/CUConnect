@@ -2,7 +2,22 @@
 
 {% block content %}
     <div class="container">
-        <h1>Jayden Smith</h1>
+      <div class="row">
+      	<div class="col-lg-4 col-md-4 col-sm-12">
+      		<div class="stack2">
+      		</div>
+      		<img src="{{ url_for('static', filename='images/default.png') }}" class = "businesslogo" style = "border: 3px solid #000">
+      		<div class="text-center">
+      		<p><a class="btn btn-dark" href="{{ url_for('family_personal') }}" style="width: 60%; margin: 20px 0px 0px 0px">Upload Image</a></p>
+      		</div>
+      	</div>
+      	<div class="col-lg-8 col-md-8 col-sm-12">
+      		<div class="stack2">
+      		</div>
+      		<p style = "margin: 20px 0px 40px 20px; font-size: 55px"><b><font color = "red">Good morning,</font><br> Jayden Smith</b></p>
+          <p style = "margin: 20px 0px 40px 20px; font-size: 30px">My Bill: $22 <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin: 0px 0px 0px 20px">Pay Bill</a></p>
+      	</div>
+      </div>
         <h2>Class Appointments</h2>
         <table class="table table-hover table-responsive">
             <thead>
