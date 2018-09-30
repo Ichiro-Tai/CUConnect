@@ -32,10 +32,9 @@
 		<div class="collapse navbar-collapse">
 			<div class="nav navbar-nav navbar-right">
 			<a class="nav-item nav-link" href="{{ url_for('index') }}">Home</a>
-			  <a class="nav-item nav-link" href="{{ url_for('aboutus') }}">About Us</a>
 			  <a class="nav-item nav-link" href="{{ url_for('rewards') }}">Rewards</a>
 			  {% if logged_in %}
-			  <a class="nav-item nav-link" href="{{ url_for('family_personal') }}">Personal</a>
+			  <a class="nav-item nav-link" href="{{ url_for('student_personal') }}">Personal</a>
 			  {% else %}
 			  <a class="nav-item nav-link" href="#">Register</a>
 			  <a class="nav-item nav-link" href="{{ url_for('login') }}">Sign in</a>

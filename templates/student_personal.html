@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Alexander Challen</h1>
+    <h2>My Points for Coupons: 32</h2>
+
+    <h2>Class Appointments</h2>
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Time</th>
+                <th>Pricing</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math</td>
+                <td>Mar. 19, 5:00pm - 8:00pm</td>
+                <td>$12</td>
+                <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form class="form-group">
+        <h3>Search for Pending Requests from the Families</h3>
+        <input type="text" class="form-control" placeholder="Search for..." style="width: 30%; display: inline"/>
+        <div class="btn btn-primary" onclick="searchToggle()">Search</div>
+        <div style="margin:100px" id="emptySpace"></div>
+        <table class="table table-hover table-responsive" id="searchTable" style="display: none">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Time</th>
+                    <th>Pricing</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>Mar. 19, 5:00pm - 8:00pm</td>
+                    <td>$12</td>
+                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>Mar. 21, 5:00pm - 8:00pm</td>
+                    <td>$20</td>
+                    <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+{% endblock %}

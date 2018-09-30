@@ -41,3 +41,8 @@ function addrequest() {
     var desc = '<td>' +  $('#description').val() + '</td>';
     $('#pendingRequests tr:last').after('<tr>' + classSubject + time + '<td>$16</td>' + desc + '</tr>');
 }
+
+function searchToggle() {
+    $('#searchTable').show();
+    $('#emptySpace').hide();
+}

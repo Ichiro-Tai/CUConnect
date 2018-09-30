@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>County Market</h1>
+    <p>$8 coupons sold: 20</p>
+    <p>$12 coupons sold: 32</p>
+    <p>$16 coupons sold: 17</p>
+    <p>$20 coupons sold: 5</p>
+
+    <h2>Coupon History</h2>
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Coupon ID</th>
+                <th>Date of Redeem</th>
+                <th>Pricing</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cd9dea50-c5520-4f98-8d7c-61865d97df4d</td>
+                <td>2018-09-30</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td>0ac8ae4b-0b73-4969-a11e-7b691312c4a2</td>
+                <td>2018-11-04</td>
+                <td>$16</td>
+            </tr>
+            <tr>
+                <td>580e8f38-0c52-4462-8dbb-8612eba9c5fe</td>
+                <td>2018-11-05</td>
+                <td>$8</td>
+            </tr>
+            <tr>
+                <td>b5a8710b-4cf1-45f1-878d-9c6c30eecd8c</td>
+                <td>2018-12-05</td>
+                <td>$8</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
