@@ -1,46 +1,6 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html" %}
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<!-- Fontawesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-	<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
-
-	<!-- Favicon -->
-	<link rel="icon" href=""/>
-	<link rel="shortcut icon" href=""/>
-
-	<title>CUConnect</title>
-</head>
-
-<body class="mainmenu-bg">
-
-	<nav class="navbar navbar-expand-lg" style="background-color: #fff3af">
-		<a class="navbar-brand" href="#">
-			<img src="{{ url_for('static', filename='images/templogo.png') }}" width="30" height="30" alt="Logo">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse">
-			<div class="nav navbar-nav navbar-right">
-			<a class="nav-item nav-link" href="#">Home</a>
-			  <a class="nav-item nav-link" href="#">About Us</a>
-			  <a class="nav-item nav-link" href="#">Rewards</a>
-			  <a class="nav-item nav-link" href="#">Register</a>
-			  <a class="nav-item nav-link" href="#">Sign in</a>
-			</div>
-		</div>
-	</nav>
+{% block content %}
 	<header class="header" style="background-image: url({{ url_for('static', filename='images/tempbg.png') }})">
 		<div class="row">
 			<div class="description ">
@@ -89,10 +49,10 @@
 			<div class="col-lg-8 col-md-8 col-sm-12">
 				<div class="student">
 					<p style = "font-size: 30px; margin:0px 20px 0px 20px; font-weight: bold">Having difficulties finding an on-campus job?</p>
-					<p style = "font-size: 20px; margin:20px 20px 0px 20px;">Become a CUConnect tutor and teach your expertise to children around you.</p>
-					<p><i class="fa fa-check"></i><b>Convienience.</b> Teach in the comfort of your living quarters without ever having to take a step outside.</p>
-					<p><i class="fa fa-check"></i><b>Choice.</b> Redeem your teaching hours for coupons from your favorite local businesses.</p>
-					<p><i class="fa fa-check"></i><b>No Paperwork.</b> Hate filling out time sheets and tax statements? Neither of that is a problem here.</p>
+					<p style = "font-size: 20px; margin:20px 20px 20px 20px;">Become a CUConnect tutor and teach your expertise to children around you.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Convienience.</b> Teach in the comfort of your dorm without the hassle of travelling.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Choice.</b> Redeem your teaching hours for coupons from your favorite local businesses.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>No Paperwork.</b> Hate filling out time sheets and tax statements? Neither of that is a problem here.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
@@ -105,10 +65,10 @@
 			<div class="col-lg-8 col-md-8 col-sm-12">
 				<div class="family">
 					<p style = "font-size: 30px; margin:0px 20px 0px 20px; font-weight: bold">Seeking for knowledgeable, affordable tutors?</p>
-					<p style = "font-size: 20px; margin:20px 20px 0px 20px;">Employ top university students to teach your children at affordable prices.</p>
-					<p><i class="fa fa-check"></i><b>Accessible.</b> Have the UofI elite at your children\'s service for as low as 20% of tutor market prices.</p>
-					<p><i class="fa fa-check"></i><b>Flexible.</b> Find tutors avaliable for a wide range of tutoring times and subjects specified by you.</p>
-					<p><i class="fa fa-check"></i><b>Interaction.</b> Children will engage with their tutors online through our cutting-edge real-time canvas.</p>
+					<p style = "font-size: 20px; margin:20px 20px 20px 20px;">Employ top university students to teach your children at affordable prices.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Accessible.</b> Have the UofI elite at your children\'s service for as low as 20% of tutor market prices.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Flexible.</b> Find tutors avaliable for a wide range of tutoring times and subjects specified by you.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Interaction.</b> Children will engage with their tutors online through our cutting-edge real-time canvas.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
@@ -120,11 +80,11 @@
 		<div class="demobg row" id="businessDemo" style="display: none">
 			<div class="col-lg-8 col-md-8 col-sm-12">
 				<div class="business">
-					<p style = "font-size: 30px; margin:0px 20px 0px 20px; font-weight: bold">Wanting to increase sales while helping the community?</p>
-					<p style = "font-size: 20px; margin:20px 20px 0px 20px;">Play a rewarding part in local education by having your discounts on coupons reimbursed.</p>
-					<p><i class="fa fa-check"></i><b>Profitable.</b> Attract students to your business through coupons paid for by local families.</p>
-					<p><i class="fa fa-check"></i><b>Charitable.</b> Improve your image through contributing to local education in a rewarding way.</p>
-					<p><i class="fa fa-check"></i><b>Customization.</b> Create electronic custom coupons at a wide range of pricing levels.</p>
+					<p style = "font-size: 30px; margin:0px 20px 0px 20px; font-weight: bold">Wanting to increase sales?</p>
+					<p style = "font-size: 20px; margin:20px 20px 20px 20px;">Attract local students while having your discounts on coupons reimbursed.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Profitable.</b> Attract students to your business through coupons paid for by local families.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Charitable.</b> Improve your image through contributing to local education in a rewarding way.</p>
+					<p><i class="fa fa-check fa-custom fa-2x"></i><b>Customization.</b> Create electronic custom coupons at a wide range of pricing levels.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
@@ -169,6 +129,4 @@
 	</div>
 	<div class = "stack3">
 	</div>
-</body>
-
-</html>
+{% endblock %}

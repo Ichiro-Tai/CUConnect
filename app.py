@@ -26,6 +26,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/rewards')
+def rewards():
+    return render_template('rewards.html')
+
 
 @app.route('/create_request', methods=['POST'])
 
@@ -69,7 +73,7 @@ def create_coupon_copy(username, article):
 def invalidate_coupon_copy(owner, article):
     db = firebase.database()
     if db.child("coupontype").child(article).get().val()['owner'] == owner :
-	db.child("coupontype").child(article).update({'valid':'no'})
+        db.child("coupontype").child(article).update({'valid':'no'})
 
 # creates a new request.
 def create_request(username):
