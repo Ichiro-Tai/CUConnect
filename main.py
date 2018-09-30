@@ -49,3 +49,8 @@ def aboutus():
 @app.route('/register')
 def register():
     return render_page('register.html')
+
+
+@app.route('/canvas')
+def canvas():
+    return render_page('canvas.html')
