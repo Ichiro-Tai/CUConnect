@@ -1,5 +1,7 @@
 # CUConnect
 
+https://devpost.com/software/cuconnect
+
 Connecting the education around the Champaign-Urbana community.
 
 ## Guideline to run CUConnect
