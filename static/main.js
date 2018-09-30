@@ -44,5 +44,6 @@ function addrequest() {
 
 function searchToggle() {
     $('#searchTable').show();
+    $('#queryresulttext').show();
     $('#emptySpace').hide();
 }

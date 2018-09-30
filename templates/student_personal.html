@@ -2,59 +2,80 @@
 
 {% block content %}
 <div class="container">
-    <h1>Alexander Challen</h1>
-    <h2>My Points for Coupons: 32</h2>
-
-    <h2>Class Appointments</h2>
-    <table class="table table-hover table-responsive">
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Time</th>
-                <th>Pricing</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Math</td>
-                <td>Mar. 19, 5:00pm - 8:00pm</td>
-                <td>$12</td>
-                <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-12">
+		<div class="stack2">
+		</div>
+		<img src="{{ url_for('static', filename='images/default.png') }}" class = "businesslogo" style = "border: 3px solid #000">
+		<div class="text-center">
+		<p><a class="btn btn-dark" href="{{ url_for('student_personal') }}" style="width: 60%; margin: 20px 0px 0px 0px">Upload Image</a></p>
+		</div>
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-12">
+		<div class="stack2">
+		</div>
+		<p style = "margin: 20px 0px 40px 20px; font-size: 55px"><b><font color = "red">Good morning,</font><br> Alexander Challen</b></p>
+    <p style = "margin: 20px 0px 40px 20px; font-size: 30px">My Points: 32 <a class="btn btn-primary" href="{{ url_for('student_personal') }}" style="margin: 0px 0px 0px 20px">Redeem now</a></p>
+	</div>
+	<h2 style = "margin: 50px 0px 20px 0px">My Appointments</h2>
+	<table class="table table-hover table-responsive">
+			<thead>
+					<tr>
+							<th>Subject</th>
+							<th>Time</th>
+							<th>Rewards &ensp;</th>
+							<th>Description</th>
+							<th></th>
+					</tr>
+			</thead>
+			<tbody>
+					<tr>
+							<td>Math</td>
+							<td>Mar. 19, 5:00pm - 8:00pm</td>
+							<td>12 points/hr</td>
+							<td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+							<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Enter classroom</a></td>
+					</tr>
+			</tbody>
+	</table>
 
     <form class="form-group">
-        <h3>Search for Pending Requests from the Families</h3>
+        <h3 style = "margin : 20px 0px 20px 0px">Search for more tutor openings</h3>
         <input type="text" class="form-control" placeholder="Search for..." style="width: 30%; display: inline"/>
         <div class="btn btn-primary" onclick="searchToggle()">Search</div>
         <div style="margin:100px" id="emptySpace"></div>
+				<div id = "queryresulttext" style="display: none">
+					<p style = "margin : 20px 0px 20px 0px; font-size: 20px">Showing 2 of 2 search results for query "Math":</p>
+				</div>
         <table class="table table-hover table-responsive" id="searchTable" style="display: none">
             <thead>
                 <tr>
                     <th>Subject</th>
                     <th>Time</th>
-                    <th>Pricing</th>
+                    <th>Rewards &ensp;</th>
                     <th>Description</th>
+										<th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Math</td>
                     <td>Mar. 19, 5:00pm - 8:00pm</td>
-                    <td>$12</td>
+                    <td>12 points/hr</td>
                     <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+										<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Apply</a></td>
                 </tr>
                 <tr>
                     <td>Math</td>
                     <td>Mar. 21, 5:00pm - 8:00pm</td>
-                    <td>$20</td>
+                    <td>20 points/hr</td>
                     <td>My child is confused about the concept of solving equations. I wish someone can help him with his homework questions. Thanks!</td>
+										<td><a class="btn btn-primary" href="{{ url_for('student_personal') }}" >Apply</a></td>
                 </tr>
             </tbody>
         </table>
     </form>
+</div>
 </div>
 
 {% endblock %}
